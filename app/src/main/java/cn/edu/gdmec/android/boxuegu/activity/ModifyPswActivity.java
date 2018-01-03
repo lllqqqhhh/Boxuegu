@@ -47,6 +47,12 @@ public class ModifyPswActivity extends AppCompatActivity {
         tv_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                ModifyPswActivity.this.finish();
+            }
+        });
+        btn_save.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
                 getEditString();
                 if (TextUtils.isEmpty(originalPsw)) {
                     Toast.makeText(ModifyPswActivity.this, "请输入原始密码",
@@ -94,6 +100,7 @@ public class ModifyPswActivity extends AppCompatActivity {
         String md5Psw = MD5Utils.md5(newPsw);
         SharedPreferences sp = getSharedPreferences("loginInfo",MODE_PRIVATE);
         SharedPreferences.Editor editor = sp.edit();
+        editor.putString(userName,md5Psw);
         editor.commit();
     }
 

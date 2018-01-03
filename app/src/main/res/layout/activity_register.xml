@@ -61,7 +61,7 @@
         android:textSize="14sp"
         android:gravity="center_vertical"/>
     <Button
-        android:text="注册"
+        android:text="注 册"
         android:id="@+id/btn_register"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="15dp"
