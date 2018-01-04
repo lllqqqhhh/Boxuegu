@@ -78,7 +78,7 @@ public class MyInfoView {
                     Intent intent = new Intent(mContext, SettingActivity.class);
                     mContext.startActivityForResult(intent,1);
                 }else{
-                    Toast.makeText(mContext,"您还为登录，请先登录",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(mContext,"您还未登录，请先登录",Toast.LENGTH_SHORT).show();
                 }
             }
         });
